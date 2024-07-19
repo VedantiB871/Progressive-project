@@ -1,81 +1,84 @@
 package com.wecp.progressive.entity;
 //import java.util.Date;
+
+import java.util.Date;
+
+// import javax.persistence.Entity;
+// import javax.persistence.GeneratedValue;
+// import javax.persistence.GenerationType;
+// import javax.persistence.Id;
+// import javax.persistence.ManyToOne;
  
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
- 
-@Entity
+//@Entity
 public class Transactions {
  
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer transactionId;
+    // @Id
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int transactionId;
  
  
-    private Integer accountId;
-    private Double amount;
-    private String transactionDate;
+    private int accountId;
+    private double amount;
     private String transactionType;
+    private Date transactionDate;
  
  
-    @ManyToOne
-    private Accounts accounts;
+    // @ManyToOne
+    // private Accounts accounts;
  
  
     public Transactions() {
     }
  
  
-    public Transactions(Integer transactionId, Integer accountId, Double amount, String transactionDate,
-            String transactionType, Accounts accounts) {
+    public Transactions(int transactionId, int accountId, double amount, Date transactionDate,
+            String transactionType) //Accounts accounts
+            {
         this.transactionId = transactionId;
         this.accountId = accountId;
         this.amount = amount;
         this.transactionDate = transactionDate;
         this.transactionType = transactionType;
-        this.accounts = accounts;
+        //this.accounts = accounts;
     }
  
  
-    public Integer getTransactionId() {
+    public int getTransactionId() {
         return transactionId;
     }
  
  
-    public void setTransactionId(Integer transactionId) {
+    public void setTransactionId(int transactionId) {
         this.transactionId = transactionId;
     }
  
  
-    public Integer getAccountId() {
+    public int getAccountId() {
         return accountId;
     }
  
  
-    public void setAccountId(Integer accountId) {
+    public void setAccountId(int accountId) {
         this.accountId = accountId;
     }
  
  
-    public Double getAmount() {
+    public double getAmount() {
         return amount;
     }
  
  
-    public void setAmount(Double amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
  
  
-    public String getTransactionDate() {
+    public Date getTransactionDate() {
         return transactionDate;
     }
  
  
-    public void setTransactionDate(String transactionDate) {
+    public void setTransactionDate(Date transactionDate) {
         this.transactionDate = transactionDate;
     }
  
@@ -90,14 +93,14 @@ public class Transactions {
     }
  
  
-    public Accounts getAccounts() {
-        return accounts;
-    }
+    // public Accounts getAccounts() {
+    //     return accounts;
+    // }
  
  
-    public void setAccounts(Accounts accounts) {
-        this.accounts = accounts;
-    }
+    // public void setAccounts(Accounts accounts) {
+    //     this.accounts = accounts;
+    // }
 
  
  
