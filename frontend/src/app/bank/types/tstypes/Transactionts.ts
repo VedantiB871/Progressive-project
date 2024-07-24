@@ -4,9 +4,9 @@
 export class TransactionTS {
     transactionId?: number;
     accountId: string;
-  amount: number;
-  transactionDate: Date;
-   transactionType:string;
+    amount: number;
+    transactionDate: Date;
+    transactionType:string;
 
     constructor(accountId: string, amount: number, transactionDate: Date, transactionId?:number) {
         this.transactionId = transactionId;
